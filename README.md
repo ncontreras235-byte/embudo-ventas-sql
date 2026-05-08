@@ -1,6 +1,10 @@
 # 📊 Análisis de Embudo de Ventas — E-commerce
 
-Análisis completo del embudo de conversión de una tienda e-commerce usando **BigQuery (Google SQL)**.
+Análisis del embudo de conversión de una tienda e-commerce con **9,381 eventos** registrados entre usuarios que interactúan con productos en distintas etapas del proceso de compra: desde la primera vista hasta la compra final.
+
+El objetivo es identificar en qué etapas se pierde más tráfico, qué canales de marketing generan mejores resultados y cuánto ingreso produce cada visitante, para proponer mejoras concretas basadas en datos.
+
+Consultas desarrolladas en **BigQuery (Google SQL)** usando CTEs, funciones de agregación y filtros de fecha.
 
 ---
 
@@ -185,9 +189,18 @@ FROM ingresos_embudo;
 
 ---
 
-## 💡 Conclusiones
+## Conclusiones
 
-- La mayor pérdida ocurre en la primera etapa: solo el **31.21%** de visitantes agrega al carrito.
-- **Email** es el canal más efectivo, convirtiendo 5 veces más que Social.
-- Una vez iniciado el checkout, el **92%** de usuarios completa la compra.
-- Social trae mucho tráfico pero con muy baja intención de compra.
+- La mayor pérdida ocurre en la primera etapa: solo el **31.21%** de visitantes agrega al carrito, siendo el punto crítico del embudo.
+- Una vez iniciado el checkout, el **92%** de usuarios completa la compra, lo que indica que el proceso de pago no genera fricciones.
+- **Email** es el canal más efectivo convirtiendo al 33.93%, 5 veces más que Social, pero aporta la menor cantidad de visitas (445).
+- **Social** trae el segundo mayor volumen de visitas (1,253) pero convierte solo el 6.70%, lo que indica tráfico de baja intención de compra.
+- Cada visitante genera en promedio **$17.82** en ingresos, mientras que cada comprador aporta **$107.40**.
+- Los 708 compradores realizaron exactamente una orden cada uno, lo que sugiere que no hay usuarios recurrentes en el período analizado.
+
+## Propuestas
+
+- **Optimizar la página de producto**: mejorar fotos, descripciones y el botón de compra para reducir el abandono del 68.8% en la primera etapa.
+- **Escalar email marketing**: aumentar la base de suscriptores ya que es el canal con mejor conversión pero menor volumen de tráfico.
+- **Redirigir presupuesto de social a paid ads**: paid ads convierte 3x más que social con menor volumen de visitas.
+- **Implementar remarketing**: activar campañas dirigidas a usuarios que agregaron al carrito pero no compraron, ya que tienen alta intención de compra.
