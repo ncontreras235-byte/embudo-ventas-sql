@@ -8,23 +8,6 @@ Consultas desarrolladas en **BigQuery (Google SQL)** usando CTEs, funciones de a
 
 ---
 
-## 🗂️ Estructura del repositorio
-
-```
-📁 embudo-ventas-sql/
-├── embudo_ventas.sql        # Consultas SQL del análisis
-├── user_events.csv          # Dataset (9,381 registros)
-├── README.md                # Documentación del proyecto
-└── 📁 screenshots/
-    ├── 01_exploracion.png
-    ├── 02_embudo_etapas.png
-    ├── 03_tasas_conversion.png
-    ├── 04_canales_trafico.png
-    └── 05_ingresos.png
-```
-
----
-
 ## 📁 Dataset
 
 | Campo | Tipo | Descripción |
